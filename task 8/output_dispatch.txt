@@ -1,0 +1,5 @@
+Overload 1: calculateFee(int minutes)  |  Overload 2: calculateFee(LocalTime in, LocalTime out)
+declared type = Vehicle, actual type = TwoWheeler -> calculateFee(130) = 30.0, calculateFee(8:00,10:10) = 30.0
+declared type = Vehicle, actual type = Car -> calculateFee(130) = 90.0, calculateFee(8:00,10:10) = 90.0
+declared type = Vehicle, actual type = ElectricCar -> calculateFee(130) = 90.0, calculateFee(8:00,10:10) = 90.0
+The compiler chose the overload from the argument types; the JVM chose ratePerHour() from the actual object.
