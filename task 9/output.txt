@@ -1,0 +1,5 @@
+ElectricCar 10 kWh -> Rs 120.0
+EBike 10 kWh -> Rs 120.0
+default method checkKwh rejects bad input: kWh cannot be negative
+Pass.none() covers any vehicle? false
+ElectricCar is a Car (class inheritance) and Chargeable (interface): two behaviours, one object.
