@@ -1,0 +1,6 @@
+t1   : Ticket#1 CAR[TN02B2] F0-S0
+copy : Ticket#1 CAR[TN02B2] F0-S0   (same ticket number: duplicate print)
+t2   : Ticket#2 CAR[TN05E5] F0-S1   (new ticket gets the next number)
+t1 == copy ? false   (different objects on the heap)
+t1.getVehicle() == copy.getVehicle() ? true   (same Vehicle referenced)
+Invalid object rejected by constructor: null argument
