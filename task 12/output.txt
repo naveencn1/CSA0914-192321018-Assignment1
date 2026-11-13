@@ -1,0 +1,9 @@
+PASS | e-bike flat Rs 20 (3h)                         | expected=20.0     actual=20.0    
+PASS | van 2h peak = 2 x 60                           | expected=120.0    actual=120.0   
+PASS | van 16:00-18:00 (1 peak + 1 off-peak)          | expected=90.0     actual=90.0    
+PASS | van off-peak 1h = car rate                     | expected=30.0     actual=30.0    
+PASS | monthly-pass holder parks free                 | expected=0.0      actual=0.0     
+PASS | one-day pass visitor parks free                | expected=0.0      actual=0.0     
+PASS | collection incl. Rs 100 day-pass sale          | expected=360.0    actual=360.0   
+
+RESULT: 7 passed, 0 failed
