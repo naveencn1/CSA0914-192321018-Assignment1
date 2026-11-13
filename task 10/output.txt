@@ -1,0 +1,10 @@
+blank registration        -> rejected: Registration number required
+negative minutes          -> rejected: Minutes cannot be negative
+negative kWh              -> rejected: kWh cannot be negative
+ticket with floor = -1    -> rejected: Invalid slot position
+exit before entry         -> rejected: Exit before entry
+release(9,9) on a lot -> false
+
+Integer a = 1000, b = 1000
+a == b      -> false   (compares references - pitfall)
+a.equals(b) -> true   (compares values - correct)
