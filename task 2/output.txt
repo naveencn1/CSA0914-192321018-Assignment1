@@ -1,0 +1,13 @@
+minutes = 130, rate = Rs 30.0/hour
+minutes / 60 (int division) -> Rs 60.0   WRONG (under-charges)
+(double) minutes / 60       -> Rs 65.0   WRONG (fraction of an hour)
+(minutes + 59) / 60         -> Rs 90.0   CORRECT (every started hour)
+
+Jagged array: 5 floors, total slots = 150
+  floor 0 -> 10 slots
+  floor 1 -> 20 slots
+  floor 2 -> 30 slots
+  floor 3 -> 40 slots
+  floor 4 -> 50 slots
+
+Input: Scanner(System.in) for interactive entry, or args[] for command-line values.
