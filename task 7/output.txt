@@ -1,0 +1,10 @@
+a.toString() = CAR[TN02B2]   b.toString() = EV[TN02B2]
+a.equals(b)  = true   (same registration number)
+hashCodes equal = true
+HashSet contains b? true   (equals + hashCode agree)
+
+Overridden calculateFee(130 minutes):
+  TWO_WHEELER[A1] -> Rs 30.0
+  CAR[B2] -> Rs 90.0
+  EBIKE[E3] -> Rs 20.0
+EBike overrides calculateFee to a flat Rs 20; the others use the inherited slab with their own rate.
