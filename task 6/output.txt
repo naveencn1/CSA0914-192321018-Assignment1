@@ -1,0 +1,7 @@
+new ElectricCar("TN03C3")
+  1) ElectricCar(String) called -> first line super(regNo)
+  2) Car(String) called         -> first line super(regNo)
+  3) Vehicle constructor body  (regNo = TN03C3)
+  4) Car constructor body
+  5) ElectricCar constructor body
+Parent constructors always finish before the child body runs.
