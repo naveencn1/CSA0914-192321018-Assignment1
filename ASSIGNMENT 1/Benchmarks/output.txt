@@ -1,0 +1,14 @@
+n,array_scan_us,arraylist_scan_us,hashmap_us   (find LAST vehicle by regNo, 2000 lookups avg)
+1000,8.16,13.64,0.501
+10000,70.27,56.40,0.076
+100000,318.40,350.28,1.370
+
+floors x slots, scan_allocate_us (building is full except last slot), stack_allocate_us
+1x20,0.826,0.462
+3x50,0.527,0.204
+5x100,0.132,0.054
+5x2000,1.918,0.067
+
+Object-per-vehicle vs parallel String arrays: memory estimate for 1,000,000 vehicles
+objects approx bytes/vehicle: 76
+parallel String[] approx bytes/vehicle: 60

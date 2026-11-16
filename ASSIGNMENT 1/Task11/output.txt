@@ -1,0 +1,22 @@
+=== Normal operation ===
+PASS | two-wheeler 2h                                 | expected=20.0     actual=20.0    
+PASS | car 2h10m (3 started hours)                    | expected=90.0     actual=90.0    
+PASS | EV parking 1h                                  | expected=30.0     actual=30.0    
+=== Boundary cases ===
+PASS | last slot taken -> next entry rejected         | expected=true     actual=true    
+PASS | zero-minute stay is free                       | expected=0.0      actual=0.0     
+PASS | exactly 60 min = 1 hour                        | expected=30.0     actual=30.0    
+PASS | 61 min = 2 hours (slab boundary)               | expected=60.0     actual=60.0    
+PASS | daily cap Rs 200                               | expected=200.0    actual=200.0   
+=== Invalid cases ===
+PASS | duplicate registration rejected                | expected=true     actual=true    
+PASS | invalid slot release(9,9)                      | expected=false    actual=false   
+PASS | release already-free slot                      | expected=false    actual=false   
+PASS | exit unknown vehicle rejected                  | expected=true     actual=true    
+PASS | blank registration rejected                    | expected=true     actual=true    
+=== Equality (Task 7) ===
+PASS | same regNo => equal across subclasses          | expected=true     actual=true    
+=== Hand-calculated day total ===
+PASS | day total (20+120+30 by hand)                  | expected=170.0    actual=170.0   
+
+RESULT: 15 passed, 0 failed

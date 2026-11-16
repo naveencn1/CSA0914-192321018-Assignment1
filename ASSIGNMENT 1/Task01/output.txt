@@ -1,0 +1,6 @@
+Object design  : find TN02B2 -> CAR[TN02B2]  (HashMap, O(1) average)
+Parallel arrays: find TN02B2 -> CAR entered 08:00  (linear scan, O(n))
+Adding a new attribute needs a 4th array and edits to every insert/remove; with objects it is one new field.
+
+Candidate classes: Vehicle(+subclasses), ParkingTicket, ParkingLot, PricingRule, Pass
+Business rules  : one vehicle per slot, unique ticket numbers, no duplicate registration

@@ -1,0 +1,7 @@
+North gate: Ticket#1 CAR[N1] F0-S0
+South gate: Ticket#2 CAR[S1] F0-S0
+North gate: Ticket#3 CAR[N2] F0-S1
+-> ticket numbers 1,2,3 are unique across both gates because the counter is static.
+
+After closeTicket(t): exit time seen by caller = 2026-11-12T09:00  (object reference passed)
+t set to null -> the ParkingTicket object is now eligible for garbage collection.
