@@ -1,0 +1,20 @@
+Data set 1 (ties) ranking : [Alpha(10,5), Charlie(10,5), Delta(10,5), Bravo(10,2), Echo(10,2), Foxtrot(7,3), Golf(7,3), Hotel(7,-1), India(3,0)]
+Same data, reversed input : [Alpha(10,5), Charlie(10,5), Delta(10,5), Bravo(10,2), Echo(10,2), Foxtrot(7,3), Golf(7,3), Hotel(7,-1), India(3,0)]
+Deterministic regardless of input order? true
+Original items untouched (insertion order): [Delta(10,5), Alpha(10,5), Charlie(10,5), Bravo(10,2), Echo(10,2), Foxtrot(7,3), Golf(7,3), Hotel(7,-1), India(3,0)]
+Comparator consistent (antisymmetric + transitive)? true
+
+Data set 2 (designed to break faulty comparators)
+Correct comparator consistent?    true
+Subtraction comparator consistent? false
+  compare(Max, Neg) via subtraction = 147483649  (should be <0 because Max ranks above Neg; overflow gives a wrong sign)
+  sorting 2000 random-int teams with subtraction: no exception, but sorted correctly? false
+No-tie-breaker ranking (input order) : [Delta(10,5), Alpha(10,5), Charlie(10,5), Bravo(10,2), Echo(10,2), Foxtrot(7,3), Golf(7,3), Hotel(7,-1), India(3,0)]
+No-tie-breaker ranking (reversed)    : [Echo(10,2), Bravo(10,2), Charlie(10,5), Alpha(10,5), Delta(10,5), Hotel(7,-1), Golf(7,3), Foxtrot(7,3), India(3,0)]
+Same result? false  -> ranking depends on input order = incorrect
+
+Three stable sorts result equals comparator chain? true
+Comparable<RankedTeam> natural order: [Alpha(10,5), Charlie(10,5), Delta(10,5), Bravo(10,2), Echo(10,2), Foxtrot(7,3), Golf(7,3), Hotel(7,-1), India(3,0)]
+max by natural order: Alpha(10,5)
+
+Sort 200,000 teams (avg of 5 runs): comparator chain = 137.5 ms, three stable sorts = 232.9 ms

@@ -1,0 +1,15 @@
+Unique students: 2
+
+Test 1 - 1000 scans of 10 distinct students
+  Predicted: broken=1000 (almost), fixed=10
+  Observed : broken=1000, fixed=10
+
+Test 2 - contains(equal object)
+  broken.contains(new BrokenStudent("X1")) = false  (equals says true, HashSet looks in wrong bucket)
+  fixed.contains(new Student("X1","B"))   = true
+
+Test 3 - change regNo AFTER adding to the HashSet
+  before change contains(m) = true
+  after  change contains(m) = false  (lost: stored in old bucket)
+  set size = 1, but contains(new MutableStudent("B200")) = false
+  adding an 'equal' B200 now gives size = 2 (duplicate!)

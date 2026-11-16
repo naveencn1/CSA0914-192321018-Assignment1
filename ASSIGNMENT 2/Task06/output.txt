@@ -1,0 +1,18 @@
+Printing the PriorityQueue directly (heap order, NOT treatment order): [Bina(S1), Dev(S1), Farid(S2), Hari(S1), Esha(S3), Chitra(S5), Gita(S5), Anil(S3)]
+Expected by hand : Bina(S1) Dev(S1) Hari(S1) Farid(S2) Anil(S3) Esha(S3) Chitra(S5) Gita(S5)
+Program output   : Bina(S1) Dev(S1) Hari(S1) Farid(S2) Anil(S3) Esha(S3) Chitra(S5) Gita(S5)
+
+Growth: average ns per operation (add / poll), random severities
+Design                                n=1,000   n=10,000  n=100,000
+PriorityQueue (binary heap) add          424        56        32
+PriorityQueue (binary heap) poll        1067       872       263
+Sorted LinkedList add                   2400     18785   skipped
+Sorted LinkedList poll                    29        14   skipped
+5 FIFO queues (ArrayDeque[]) add          46        34        30
+5 FIFO queues (ArrayDeque[]) poll        754         9        50
+
+Starvation demo: 1 minor patient (S5) then every tick 2 new critical patients arrive, 1 is served per tick
+  strict priority : minor patient served at tick = -1
+  with aging      : minor patient served at tick = 40
+
+A whole day (5,000 admits + 5,000 serves) took 34.51 ms (served=5000)

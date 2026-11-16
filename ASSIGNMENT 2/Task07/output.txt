@@ -1,0 +1,13 @@
+Java 21.0.12.1
+
+=== 10000 tickets x 50 fields | identical output: true ===
+Version                                      avg ms     allocated MB MB / 1000 tickets
+Original (+ in loop)                          15.42           160.29           16.029   (x1.0 faster, x1.0 less memory)
+StringBuilder + temporaries                   13.17            44.33            4.433   (x1.2 faster, x3.6 less memory)
+Redesign (reuse, presized, chained)           18.01             5.95            0.595   (x0.9 faster, x26.9 less memory)
+
+=== 50 tickets x 2000 fields | identical output: true ===
+Version                                      avg ms     allocated MB MB / 1000 tickets
+Original (+ in loop)                          83.16          1247.44        24948.829   (x1.0 faster, x1.0 less memory)
+StringBuilder + temporaries                    1.89             7.85          157.028   (x44.0 faster, x158.9 less memory)
+Redesign (reuse, presized, chained)            1.38             1.27           25.490   (x60.4 faster, x978.8 less memory)

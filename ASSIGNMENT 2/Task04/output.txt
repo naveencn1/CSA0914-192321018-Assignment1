@@ -1,0 +1,31 @@
+Java 21.0.12.1
+Structure                         n  100k lookups ms      ns / lookup  code-order ms insert-order ms
+HashMap                        1000             5.09             50.9           1.30           0.05   codeOrderOK=true insertionOrderOK=false
+LinkedHashMap                  1000             7.50             75.0           0.84           0.02   codeOrderOK=true insertionOrderOK=true
+TreeMap                        1000            16.85            168.5           0.08           0.05   codeOrderOK=true insertionOrderOK=false
+Hashtable                      1000             2.32             23.2           1.02           0.03   codeOrderOK=true insertionOrderOK=false
+SortedArray+binarySearch       1000             9.54             95.4           0.05           0.00   codeOrderOK=true insertionOrderOK=false
+
+HashMap                       10000             2.77             27.7           2.45           0.10   codeOrderOK=true insertionOrderOK=false
+LinkedHashMap                 10000             1.17             11.7           6.32           0.09   codeOrderOK=true insertionOrderOK=true
+TreeMap                       10000            16.24            162.4           0.37           1.06   codeOrderOK=true insertionOrderOK=false
+Hashtable                     10000             4.80             48.0           2.30           0.18   codeOrderOK=true insertionOrderOK=false
+SortedArray+binarySearch      10000            14.06            140.6           0.31           0.00   codeOrderOK=true insertionOrderOK=false
+
+HashMap                      100000            21.75            217.5          11.79           3.57   codeOrderOK=true insertionOrderOK=false
+LinkedHashMap                100000             5.33             53.3          20.60           6.86   codeOrderOK=true insertionOrderOK=true
+TreeMap                      100000            39.93            399.3           5.29           5.28   codeOrderOK=true insertionOrderOK=false
+Hashtable                    100000             4.33             43.3           4.25           3.43   codeOrderOK=true insertionOrderOK=false
+SortedArray+binarySearch     100000            11.79            117.9           1.40           0.00   codeOrderOK=true insertionOrderOK=false
+
+HashMap                      500000            40.09            400.9          34.76          34.98   codeOrderOK=true insertionOrderOK=false
+LinkedHashMap                500000            10.82            108.2         203.68          57.53   codeOrderOK=true insertionOrderOK=true
+TreeMap                      500000            83.64            836.4          30.07          28.22   codeOrderOK=true insertionOrderOK=false
+Hashtable                    500000             9.22             92.2          35.10           5.48   codeOrderOK=true insertionOrderOK=false
+SortedArray+binarySearch     500000            19.61            196.1          12.06           0.00   codeOrderOK=true insertionOrderOK=false
+
+Own iteration order of keys (10 medicines, inserted in shuffled order):
+  inserted      : [1000, 1003, 1027, 1009, 1021, 1012, 1024, 1015, 1006, 1018]
+  HashMap       : [1024, 1009, 1027, 1012, 1015, 1000, 1018, 1003, 1021, 1006]
+  LinkedHashMap : [1000, 1003, 1027, 1009, 1021, 1012, 1024, 1015, 1006, 1018]
+  TreeMap       : [1000, 1003, 1006, 1009, 1012, 1015, 1018, 1021, 1024, 1027]
