@@ -1,0 +1,7 @@
+READ THIS FIRST
+2. Your name and register number are already filled in. Put your GitHub username into the repository link in README.md and the REPORT.md cover page.
+2. Replace V V Naveen Kumar, 192321018 and the repository link in README.md and REPORT.md. Rename this folder to CSA09-192321018-Assignment4.
+3. Tasks 1, 4 and 5 refer to programs supplied on Google Classroom (with TODOs). Those files were not available, so the
+   "flawed" programs here are rebuilt from the task description. Apply the same fixes to YOUR supplied files and use your files for the evidence.
+4. Take the screenshots yourself (docs/SCREENSHOTS_TO_CAPTURE.md) and run the MySQL benchmark for Task 6; the sandbox that built this had no display or MySQL.
+5. Commit task by task (docs/COMMIT_GUIDE.md), share the repo with faculty, put the link on the report cover page.

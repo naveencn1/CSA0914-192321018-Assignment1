@@ -1,0 +1,4 @@
+# Copy to db.properties (do NOT commit real passwords)
+url=jdbc:mysql://localhost:3306/campus_events
+user=root
+password=change_me

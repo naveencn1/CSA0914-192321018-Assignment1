@@ -1,0 +1,6 @@
+N dots     A: redraw points (ms)  B: drawImage (ms)      A list memory (KB)
+100        0.735                  0.229                  3                 
+1000       2.779                  0.182                  31                
+10000      11.441                 0.188                  312               
+100000     98.466                 0.206                  3125              
+Buffer memory is constant: 800 x 600 x 4 bytes = 1875 KB

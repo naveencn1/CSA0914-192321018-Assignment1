@@ -1,0 +1,7 @@
+Approach               Time (ms)      Heap used (MB)    
+Run 1 - all 100000     982.7          56.61              (rows in model: 100000)
+Run 1 - page of 50     0.6            0.34               (rows in model: 50)
+Run 2 - all 100000     566.9          55.10              (rows in model: 100000)
+Run 2 - page of 50     0.4            0.34               (rows in model: 50)
+Run 3 - all 100000     406.3          53.04              (rows in model: 100000)
+Run 3 - page of 50     0.2            0.34               (rows in model: 50)
