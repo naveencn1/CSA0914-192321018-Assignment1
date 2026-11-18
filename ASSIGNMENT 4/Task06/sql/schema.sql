@@ -1,0 +1,2 @@
+-- Task 06: write your own schema here (events, students, registrations).
+-- Remember: the duplicate rule must also be enforced in the database (UNIQUE constraint).
