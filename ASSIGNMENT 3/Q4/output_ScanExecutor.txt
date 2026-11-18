@@ -1,0 +1,7 @@
+Total (executor) = 76 (expected 76)
+
+n = 400 scripts, 2 ms each. Time with p pool threads (expect about n/p * 2 ms):
+  p=1   878 ms   (ideal 800 ms)
+  p=2   430 ms   (ideal 400 ms)
+  p=4   216 ms   (ideal 200 ms)
+  p=8   108 ms   (ideal 100 ms)

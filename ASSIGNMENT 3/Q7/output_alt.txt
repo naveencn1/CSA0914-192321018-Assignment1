@@ -1,0 +1,10 @@
+=== Alternative 1: files.parallelStream() ===
+  5958 ms, peak JVM threads 7 (common pool size = 1), ok=9424 failed=576 complete=true
+
+=== Alternative 2: one thread per file (10,000 platform threads) ===
+  1145 ms, peak JVM threads 74, ok=9424 failed=576 complete=true
+  NOTE: the measured peak is low only because tiny tasks finish while others are still being created.
+  Worst case if all were alive together: 10,000 threads x ~1 MB reserved stack = ~10 GB of address space (OutOfMemoryError risk).
+
+=== Reference: ExecutorService with 8 threads ===
+  1498 ms, 8 worker threads, ok=9424 failed=576 complete=true

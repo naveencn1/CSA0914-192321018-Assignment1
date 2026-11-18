@@ -1,0 +1,20 @@
+CPU cores available: 1
+
+=== 10,000 files, I/O-bound (1 ms simulated latency per file) ===
+  pool= 1   12039 ms   ok=9424 failed=576  complete=true
+  pool= 2    5849 ms   ok=9424 failed=576  complete=true
+  pool= 4    2893 ms   ok=9424 failed=576  complete=true
+  pool= 8    1481 ms   ok=9424 failed=576  complete=true
+  pool=16     748 ms   ok=9424 failed=576  complete=true
+--- summary (pool 8) ---
+  files expected : 10000
+  succeeded      : 9424
+  failed         : 576  {EMPTY=90, FORMAT=185, MISSING=202, RANGE=99}
+  completeness   : succeeded + failed = 10000  (OK - every file accounted for)
+
+=== 10,000 files, CPU/disk-bound (no added latency) ===
+  pool= 1     183 ms   ok=9424 failed=576  complete=true
+  pool= 2     129 ms   ok=9424 failed=576  complete=true
+  pool= 4     112 ms   ok=9424 failed=576  complete=true
+  pool= 8     121 ms   ok=9424 failed=576  complete=true
+  pool=16     131 ms   ok=9424 failed=576  complete=true

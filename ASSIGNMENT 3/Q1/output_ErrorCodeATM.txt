@@ -1,0 +1,8 @@
+1001 2000    -> code 0
+abc 5        -> code -1
+1001 xyz     -> code -1
+1001 -5      -> code -2
+1001 99999   -> code -3
+1001         -> code -1
+
+Failure path, 1,000,000 calls: error code = 2.6 ms (2.6 ns/call), exception = 230.4 ms (230.4 ns/call), ratio ~ 87x  (sink=0)

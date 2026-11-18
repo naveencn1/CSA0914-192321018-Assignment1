@@ -1,0 +1,37 @@
+Test                   | Path taken                                           | finally
+------------------------------------------------------------------------------------------
+T1 valid  (input: "1001 2000")
+  Dispensed 2000 to account 1001, balance 3000.0
+  [finally] scanner closed, card ejected
+T1 valid               | no exception                                         | ran
+
+T2 letters account  (input: "abc 500")
+  Please type digits only: NumberFormatException
+  [finally] scanner closed, card ejected
+T2 letters account     | catch NumberFormatException | InputMismatchException | ran
+
+T3 letters amount  (input: "1001 xyz")
+  Please type digits only: InputMismatchException
+  [finally] scanner closed, card ejected
+T3 letters amount      | catch NumberFormatException | InputMismatchException | ran
+
+T4 negative amount  (input: "1001 -50")
+  Invalid amount: Amount must be positive: -50
+  [finally] scanner closed, card ejected
+T4 negative amount     | catch IllegalArgumentException                       | ran
+
+T5 over balance  (input: "1001 99999")
+  Declined: Requested 99999 but balance is 3000.0
+  [finally] scanner closed, card ejected
+T5 over balance        | catch InsufficientFundsException                     | ran
+
+T6 card file missing  (input: "1001 500")
+  Card reader file missing: no_such_card.dat (No such file or directory)
+  [finally] scanner closed, card ejected
+T6 card file missing   | catch FileNotFoundException                          | ran
+
+T7 amount missing  (input: "1001")
+  Incomplete input: null
+  [finally] scanner closed, card ejected
+T7 amount missing      | catch NoSuchElementException                         | ran
+

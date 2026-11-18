@@ -1,0 +1,12 @@
+=== 1. Counter size over time (while + notifyAll, 2 consumers) ===
+  result: OK
+  size after each put/take: [1, 2, 3, 4, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 4, 5, 4, 3, 2, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 2, 3, 4, 3, 2, 1, 0]
+  max size = 5 (limit 5), min size = 0 (limit 0)
+
+=== 2. Change while -> if, 300 trials each (2 consumers) ===
+  while + notifyAll                        {OK=300}
+  if    + notifyAll                        {OK=247, WRONG=53}
+
+=== 3. notify() instead of notifyAll(), 4 consumers, 100 trials ===
+  while + notifyAll (4 consumers)          {OK=100}
+  while + notify    (4 consumers)          {OK=100}

@@ -1,0 +1,13 @@
+// Name: V V Naveen Kumar | Register No: 192321018 | Course: Programming in Java (CSA09) | Assignment 3 (CO3)
+// Rename to BrokenOrder.java and compile to demonstrate the compile-time error.
+public class BrokenOrder {
+    public static void main(String[] args) {
+        try {
+            Integer.parseInt("abc");
+        } catch (Exception e) {                    // broad first
+            System.out.println("general");
+        } catch (NumberFormatException e) {        // ERROR: exception NumberFormatException has already been caught
+            System.out.println("specific");
+        }
+    }
+}

@@ -1,0 +1,13 @@
+=== Hand-checked set of 10 files ===
+--- pool of 1 ---
+  files expected : 10
+  succeeded      : 6
+  failed         : 4  {EMPTY=1, FORMAT=1, MISSING=1, RANGE=1}
+  completeness   : succeeded + failed = 10  (OK - every file accounted for)
+  matches hand-checked expectation (6 ok; EMPTY 1, FORMAT 1, RANGE 1, MISSING 1): true
+--- pool of 4 ---
+  files expected : 10
+  succeeded      : 6
+  failed         : 4  {EMPTY=1, FORMAT=1, MISSING=1, RANGE=1}
+  completeness   : succeeded + failed = 10  (OK - every file accounted for)
+  matches hand-checked expectation (6 ok; EMPTY 1, FORMAT 1, RANGE 1, MISSING 1): true

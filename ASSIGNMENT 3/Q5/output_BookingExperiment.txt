@@ -1,0 +1,25 @@
+=== A. Reproduce double booking (unsynchronised, 10 runs, 10 seats, 100 users) ===
+  run  1: seats sold =  19  (expected 10)  <-- DOUBLE BOOKING
+  run  2: seats sold =  17  (expected 10)  <-- DOUBLE BOOKING
+  run  3: seats sold =  17  (expected 10)  <-- DOUBLE BOOKING
+  run  4: seats sold =  18  (expected 10)  <-- DOUBLE BOOKING
+  run  5: seats sold =  18  (expected 10)  <-- DOUBLE BOOKING
+  run  6: seats sold =  17  (expected 10)  <-- DOUBLE BOOKING
+  run  7: seats sold =  18  (expected 10)  <-- DOUBLE BOOKING
+  run  8: seats sold =  18  (expected 10)  <-- DOUBLE BOOKING
+  run  9: seats sold =  18  (expected 10)  <-- DOUBLE BOOKING
+  run 10: seats sold =  16  (expected 10)  <-- DOUBLE BOOKING
+  total extra (double) bookings over 10 runs: 76
+
+=== B. Synchronised versions never double-book (10 runs each) ===
+  SyncMethod     max seats sold in 10 runs = 10 (expected 10)
+  SyncBlock      max seats sold in 10 runs = 10 (expected 10)
+  AtomicBoolean  max seats sold in 10 runs = 10 (expected 10)
+  ReentrantLock  max seats sold in 10 runs = 10 (expected 10)
+
+=== C. Time for 10,000 booking attempts, 1,000 seats, 8 threads (median of 7 runs, microseconds) ===
+  Unsafe (wrong!)     389 us  (0.39 ms)
+  SyncMethod          549 us  (0.55 ms)
+  SyncBlock           504 us  (0.50 ms)
+  AtomicBoolean       136 us  (0.14 ms)
+  ReentrantLock       234 us  (0.23 ms)

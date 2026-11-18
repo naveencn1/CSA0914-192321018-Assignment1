@@ -1,0 +1,37 @@
+=== 1. Normal run with life-cycle states ===
+  Station-1 state before start = NEW
+  Station-2 state before start = NEW
+  Station-3 state before start = NEW
+  Station-4 state before start = NEW
+  isAlive right after start: true, state = TIMED_WAITING
+  state while scanning = TIMED_WAITING
+  Station-2 finished: 18 scripts (thread Station-2)
+  Station-4 finished: 19 scripts (thread Station-4)
+  Station-3 finished: 20 scripts (thread Station-3)
+  Station-1 finished: 20 scripts (thread Station-1)
+  isAlive after join: false, state = TERMINATED
+  TOTAL scanned = 77 (expected 77)
+  order: Station-2 > Station-4 > Station-3 > Station-1
+
+=== 2. run() instead of start(): no new thread ===
+  running in thread: main
+  running in thread: Worker
+
+=== 3. Ten runs - order of finishing (Student B) ===
+  run  1: Station-2 > Station-4 > Station-3 > Station-1
+  run  2: Station-2 > Station-4 > Station-1 > Station-3
+  run  3: Station-2 > Station-4 > Station-1 > Station-3
+  run  4: Station-2 > Station-4 > Station-3 > Station-1
+  run  5: Station-2 > Station-4 > Station-3 > Station-1
+  run  6: Station-2 > Station-4 > Station-3 > Station-1
+  run  7: Station-2 > Station-4 > Station-3 > Station-1
+  run  8: Station-2 > Station-4 > Station-1 > Station-3
+  run  9: Station-2 > Station-4 > Station-1 > Station-3
+  run 10: Station-2 > Station-4 > Station-3 > Station-1
+  distinct orders: 2
+
+=== 4. Priorities (hint only - the scheduler may ignore it) ===
+  Station-1 priority 1 vs Station-2 priority 10, same work, 5 runs: [Station-2 > Station-1, Station-1 > Station-2, Station-2 > Station-1, Station-2 > Station-1, Station-1 > Station-2]
+
+=== 5. Daemon thread: JVM does not wait for it ===
+  main() ends now; daemon still alive = true

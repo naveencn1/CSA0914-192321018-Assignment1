@@ -1,0 +1,26 @@
+=== Test table (one scenario per exception) ===
+  [storage] saved answer.pdf for S1
+1 normal               -> Submission accepted
+2 window closed        -> Rejected: Exam window closed at 2026-11-20T12:00
+3 not registered       -> Rejected: S9 is not registered for CSA09
+4 file too large       -> Rejected: File is 800 KB, limit is 500 KB
+
+=== 5 storage failure WITH cause (chained stack trace) ===
+SubmissionStorageException: Could not store answer.pdf
+	at StorageLayer.store(ExamPortal.java:37)
+	at ServiceLayer.submit(ExamPortal.java:53)
+	at ControllerLayer.handle(ExamPortal.java:65)
+	at ExamPortal.main(ExamPortal.java:90)
+Caused by: java.io.IOException: Disk quota exceeded
+	at StorageLayer.store(ExamPortal.java:34)
+	... 3 more
+-> Sorry, your file could not be saved. Please try again later.
+
+=== 6 storage failure WITHOUT cause (information lost) ===
+SubmissionStorageException: Could not store answer.pdf
+	at StorageLayer.store(ExamPortal.java:38)
+	at ServiceLayer.submit(ExamPortal.java:53)
+	at ControllerLayer.handle(ExamPortal.java:65)
+	at ExamPortal.main(ExamPortal.java:94)
+-> Sorry, your file could not be saved. Please try again later.
+getCause() = null   <- the 'Disk quota exceeded' reason is gone

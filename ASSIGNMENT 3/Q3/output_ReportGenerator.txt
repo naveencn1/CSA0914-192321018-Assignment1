@@ -1,0 +1,31 @@
+=== Same input, all three versions: reports must be identical ===
+manualLeaky (good input)   completed                    open readers=0, open writers=0
+manualFinally (good)       completed                    open readers=0, open writers=0
+withResources (good)       completed                    open readers=0, open writers=0
+Reports identical: true
+store1.txt,360.75
+store2.txt,370.75
+store3.txt,380.75
+store4.txt,390.75
+TOTAL,1503.0
+
+=== Failing input (store3 has the line 'N/A'): count what is left open ===
+Nov 18, 2026 2:59:48 AM ReportGenerator sumStore
+SEVERE: File /tmp/sales3107010913040511113/store3.txt failed at line 2: For input string: "N/A"
+manualLeaky (bad input)    FAILED with NumberFormatException open readers=4, open writers=1
+Nov 18, 2026 2:59:48 AM ReportGenerator sumStore
+SEVERE: File /tmp/sales3107010913040511113/store3.txt failed at line 2: For input string: "N/A"
+manualFinally (bad)        FAILED with NumberFormatException open readers=0, open writers=0
+Nov 18, 2026 2:59:48 AM ReportGenerator sumStore
+SEVERE: File /tmp/sales3107010913040511113/store3.txt failed at line 2: For input string: "N/A"
+withResources (bad)        FAILED with NumberFormatException open readers=0, open writers=0
+
+=== Suppressed exceptions ===
+open  A
+open  B
+body throws
+close B
+close A
+primary   : java.lang.RuntimeException: body failure
+suppressed: java.lang.IllegalStateException: close failed for B
+suppressed: java.lang.IllegalStateException: close failed for A

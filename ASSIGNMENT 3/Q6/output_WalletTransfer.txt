@@ -1,0 +1,12 @@
+=== 1. Reliable deadlock: T1 transfers A->B while T2 transfers B->A ===
+  after 1 s: T1 state=BLOCKED, T2 state=BLOCKED
+  JVM reports deadlocked threads: 2
+    Transfer-A-to-B is BLOCKED waiting for lock held by Transfer-B-to-A
+    Transfer-B-to-A is BLOCKED waiting for lock held by Transfer-A-to-B
+  balances unchanged: A=1000 B=1000
+
+=== 2. Same two transfers with lock ordering ===
+  finished: true, C=950 D=1050 (expected 950 / 1050)
+
+=== 3. Stress: 8 threads x 5000 random transfers among 5 accounts (ordered) ===
+  all threads finished, total money = 5000 (expected 5000)
