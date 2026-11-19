@@ -1,0 +1,21 @@
+Picked up JAVA_TOOL_OPTIONS: -XX:+IgnoreUnrecognizedVMOptions -XX:-UseBASE64Intrinsics
+=== 1. BUILD 800,000 passes (12 campuses) in text and serialized forms ===
+text file write            :      374 ms   size=46 MB
+12 per-campus .ser write   :     1299 ms   total size=49 MB
+
+=== 2. LOOKUP of one pass by ID (random ids) ===
+text scan, avg of 20 finds :     75.5 ms per find  -> 1,000 finds ~ 75.5 s
+HashMap: load=1662 ms, heap~307 MB, 1,000 finds=1.71 ms
+serialization single file  : write=1951 ms, size=49 MB, full read (needed for ANY lookup)=1390 ms
+per-campus files           : one campus read=92 ms; search ACROSS all 12 campuses=752 ms
+
+=== 3. DATABASE (one shared table, PRIMARY KEY pass_id, INDEX(campus,route_no)) ===
+load 800,000 rows (1 txn, batches of 1000): 13811 ms
+1,000 random PK lookups     : 41 ms total  (0.04 ms each)
+route listing (campus 3, route 4) via index: 1.8 ms, 13334 rows
+lookup by UNINDEXED register_no (full table scan): 76.5 ms
+
+=== 4. CONCURRENT COUNTERS: 8 counters x 500 passes = 4,000 issues, each takes the NEXT issue number ===
+(a) text file, no locking  :    491 ms  lines=4000  DISTINCT issue numbers=521  DUPLICATES=3479
+(b) text file + lock       :    420 ms  lines=4000  DISTINCT issue numbers=4000  DUPLICATES=0
+(c) database AUTO_INCREMENT:    372 ms  rows=4000   DISTINCT issue numbers=4000  DUPLICATES=0

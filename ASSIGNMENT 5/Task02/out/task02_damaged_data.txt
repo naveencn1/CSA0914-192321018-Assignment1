@@ -1,0 +1,13 @@
+line 1  OK       P2001|192321018|V V Naveen Kumar|12|Sriperumbudur|2027-03-31|6500
+line 2  DAMAGED  P2002|192321019|Anita|12|Guindy|2027-03-31                             -> wrong field count (6 instead of 7)
+line 3  DAMAGED  P2003|192321020|Ravi|7|Tambaram|2027-03-31|SIX THOUSAND                -> non-numeric amount 'SIX THOUSAND'
+line 4  DAMAGED  <empty>                                                                -> empty/blank line
+line 5  DAMAGED  P2005|192321022|Meena|7|Porur|2027-03-31|6200|EXTRA                    -> wrong field count (8 instead of 7)
+line 6  DAMAGED  |192321023|NoId|3|Avadi|2027-03-31|6100                                -> blank pass ID (no key)
+line 7  DAMAGED  P2007|192321024|Karthik|3|Avadi|2027-03-31|-50                         -> negative amount
+line 8  OK       P2008|192321025|Divya|12|Kundrathur|2027-03-31|6400
+
+lines read=8 valid=2 damaged=6
+find(P2008) after 6 damaged lines -> P2008|192321025|Divya|12|Kundrathur|2027-03-31|6400
+find(P2003) damaged (non-numeric amount) -> null
+find(P2002) damaged (5 fields)           -> null

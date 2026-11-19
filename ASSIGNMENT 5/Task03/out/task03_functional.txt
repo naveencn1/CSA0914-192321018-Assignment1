@@ -1,0 +1,36 @@
+=== PART 1: insert 10 records with each approach ===
+Statement                  inserted=10  rows in table=10
+PreparedStatement          inserted=10  rows in table=10
+PreparedStatement batch    inserted=10  rows in table=10
+
+=== PART 2: SELECT * + ResultSetMetaData (table holds the 10 batch-inserted rows) ===
+-- column metadata --
+1. pass_id        VARCHAR    java=java.lang.String     size=12   nullable=NO
+2. register_no    VARCHAR    java=java.lang.String     size=12   nullable=NO
+3. name           VARCHAR    java=java.lang.String     size=60   nullable=NO
+4. route_no       VARCHAR    java=java.lang.String     size=4    nullable=NO
+5. boarding_stop  VARCHAR    java=java.lang.String     size=40   nullable=NO
+6. valid_until    DATE       java=java.sql.Date        size=10   nullable=NO
+7. amount_paid    INTEGER    java=java.lang.Integer    size=11   nullable=NO
+-- rows --
+P1000 | 192322000 | Student 1000 | 1 | Sriperumbudur | 2027-03-31 | 6300
+P1001 | 192322001 | Student 1001 | 2 | Guindy | 2027-03-31 | 6301
+P1002 | 192322002 | Student 1002 | 3 | Tambaram | 2027-03-31 | 6302
+P1003 | 192322003 | Student 1003 | 4 | Porur | 2027-03-31 | 6303
+P1004 | 192322004 | Student 1004 | 5 | Poonamallee | 2027-03-31 | 6304
+P1005 | 192322005 | Student 1005 | 6 | Avadi | 2027-03-31 | 6305
+P1006 | 192322006 | Student 1006 | 7 | Kundrathur | 2027-03-31 | 6306
+P1007 | 192322007 | Student 1007 | 8 | Vandalur | 2027-03-31 | 6307
+P1008 | 192322008 | Student 1008 | 9 | Sriperumbudur | 2027-03-31 | 6308
+P1009 | 192322009 | Student 1009 | 10 | Guindy | 2027-03-31 | 6309
+
+=== PART 3: invalid amount HALFWAY through 1,000 rows (row 500 has amount = -1) ===
+-- A) AUTO-COMMIT, batches of 100 so the failure lands mid-way --
+failure: (conn=48) CONSTRAINT `chk_amount` failed for `csa09_assignment5`.`bus_pass`
+rows left in table after failure (auto-commit): 499   <-- PARTIAL DATA, inconsistent
+-- B) SINGLE TRANSACTION (commit/rollback) --
+failure: (conn=48) CONSTRAINT `chk_amount` failed for `csa09_assignment5`.`bus_pass`
+rollback executed
+rows left in table after failure (transaction): 0   <-- all-or-nothing
+-- C) same transaction code with VALID data --
+inserted=1000 rows in table=1000

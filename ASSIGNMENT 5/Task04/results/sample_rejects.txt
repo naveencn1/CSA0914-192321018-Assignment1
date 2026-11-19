@@ -1,0 +1,7 @@
+line_no|reason|raw_line
+3|non-numeric amount 'SIX THOUSAND'|P3003|192321020|Ravi|7|Tambaram|2027-03-31|SIX THOUSAND
+5|empty line|
+6|invalid date '31/03/2027'|P3006|192321023|Karthik|3|Avadi|31/03/2027|6100
+7|wrong field count (4)|P3007|192321024|Divya|12
+8|duplicate pass ID P3001|P3001|192321025|Duplicate Person|12|Guindy|2027-03-31|6400
+9|negative amount|P3009|192321026|Suresh|3|Avadi|2027-03-31|-50

@@ -1,0 +1,31 @@
+rows,method,commit_mode,ms
+1000,Statement,auto-commit,208.7
+10000,Statement,auto-commit,1580.5
+100000,Statement,auto-commit,12857.4
+1000,PreparedStatement,auto-commit,275.7
+10000,PreparedStatement,auto-commit,1616.9
+100000,PreparedStatement,auto-commit,12382.4
+1000,PreparedStatement batch(1000),auto-commit,136.8
+10000,PreparedStatement batch(1000),auto-commit,1338.1
+100000,PreparedStatement batch(1000),auto-commit,12546.4
+1000,Statement,1 transaction,18.0
+10000,Statement,1 transaction,180.7
+100000,Statement,1 transaction,1492.6
+1000,PreparedStatement,1 transaction,27.8
+10000,PreparedStatement,1 transaction,207.8
+100000,PreparedStatement,1 transaction,1603.3
+1000,PreparedStatement batch(1000),1 transaction,20.5
+10000,PreparedStatement batch(1000),1 transaction,197.5
+100000,PreparedStatement batch(1000),1 transaction,1491.0
+1000,batch(1000) useBulkStmts=false,auto-commit,149.8
+10000,batch(1000) useBulkStmts=false,auto-commit,1353.0
+100000,batch(1000) useBulkStmts=false,auto-commit,12385.5
+1000,batch(1000) useBulkStmts=false,1 transaction,16.9
+10000,batch(1000) useBulkStmts=false,1 transaction,178.5
+100000,batch(1000) useBulkStmts=false,1 transaction,1558.6
+1000,multi-row INSERT (1000/stmt),1 transaction,16.4
+10000,multi-row INSERT (1000/stmt),1 transaction,170.4
+100000,multi-row INSERT (1000/stmt),1 transaction,665.4
+1000,LOAD DATA LOCAL INFILE,server bulk load,18.9
+10000,LOAD DATA LOCAL INFILE,server bulk load,39.4
+100000,LOAD DATA LOCAL INFILE,server bulk load,336.3

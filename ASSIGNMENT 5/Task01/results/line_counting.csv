@@ -1,0 +1,4 @@
+size_mb,lines,unbuffered_ms,buffered64k_ms,bufferedReader_ms,readAllLines_ms,calls_unbuffered,calls_buffered,readAllLines_heap_mb
+1,18022,218,4,5,4,1048583,18,2
+10,177206,2111,4,21,40,10485807,162,19
+50,878594,10598,18,86,157,52428813,802,96

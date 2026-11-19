@@ -1,0 +1,14 @@
+== TEST 1: add three passes (append + fsync) ==
+== TEST 2: find existing id P1003 (normal case) ==
+P1003|192321020|Ravi|7|Tambaram|2027-03-31|6200
+== TEST 3: find damaged P1002 (expected: null) ==
+null
+== TEST 4: find non-existent id P9999 (expected: null) ==
+null
+== TEST 5: search continues past a damaged line (P1003 sits AFTER damaged P1002) ==
+PASS: P1003 found after damaged line
+== TEST 6: list route 12 ==
+P1001|192321018|V V Naveen Kumar|12|Sriperumbudur|2027-03-31|6500
+damaged lines skipped while listing: 1
+== TEST 7: missing file (expected: null, no exception) ==
+null

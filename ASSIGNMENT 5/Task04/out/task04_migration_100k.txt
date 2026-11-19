@@ -1,0 +1,17 @@
+=== DatabaseMetaData ===
+Database product : MariaDB 10.11.14-MariaDB-0ubuntu0.24.04.1
+Driver           : MariaDB Connector/J 2.7.6 (JDBC 4.2)
+URL / user       : jdbc:mariadb://localhost:3306/csa09_assignment5 / csa09
+Supports transactions: true, batch updates: true
+Tables in catalog 'csa09_assignment5':
+  - bus_pass
+  - bus_pass_migrated
+  - decision_pass
+  - issue_counter
+  - users
+
+=== MIGRATION RESULT ===
+lines read=100000  loaded=99800  rejected=200  rows in DB=99800  consistent=true
+time=3.58 s  (27866 records/s)
+rejection summary: {duplicate pass ID=33, empty line=34, invalid date=33, negative amount=33, non-numeric amount=34, wrong field count=33}
+rejected lines written to: results/rejects_100k.txt

@@ -1,0 +1,14 @@
+TEST                                     | UNSAFE   | PREPARED
+----------------------------------------------------------------
+T1 valid credentials                     | ACCEPTED | ACCEPTED
+    unsafe SQL sent: SELECT * FROM users WHERE username = 'naveen' AND password = 'sim@ts2026'
+T2 wrong password (plain)                | rejected | rejected
+    unsafe SQL sent: SELECT * FROM users WHERE username = 'naveen' AND password = 'wrong'
+T3 ATTACK  ' OR '1'='1 in password       | ACCEPTED | rejected
+    unsafe SQL sent: SELECT * FROM users WHERE username = 'naveen' AND password = 'x' OR '1'='1'
+T4 ATTACK  comment-out password          | ACCEPTED | rejected
+    unsafe SQL sent: SELECT * FROM users WHERE username = 'admin' -- ' AND password = 'anything'
+T5 ATTACK  unknown user + tautology      | ACCEPTED | rejected
+    unsafe SQL sent: SELECT * FROM users WHERE username = 'nosuchuser' OR 1=1 -- ' AND password = 'x'
+T6 ATTACK  quote only (syntax probe)     | rejected | rejected
+    unsafe SQL sent: SELECT * FROM users WHERE username = 'a'' AND password = 'b'   [SQL ERROR: (conn=6) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'b'' at line 1]

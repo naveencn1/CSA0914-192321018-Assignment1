@@ -1,0 +1,12 @@
+Picked up JAVA_TOOL_OPTIONS: -XX:+IgnoreUnrecognizedVMOptions -XX:-UseBASE64Intrinsics
+method                             commit            1,000     10,000    100,000
+Statement                          auto-commit         209       1580      12857   (ms)
+PreparedStatement                  auto-commit         276       1617      12382   (ms)
+PreparedStatement batch(1000)      auto-commit         137       1338      12546   (ms)
+Statement                          1 txn                18        181       1493   (ms)
+PreparedStatement                  1 txn                28        208       1603   (ms)
+PreparedStatement batch(1000)      1 txn                20        197       1491   (ms)
+batch(1000) useBulkStmts=false     auto-commit         150       1353      12385   (ms)
+batch(1000) useBulkStmts=false     1 txn                17        179       1559   (ms)
+multi-row INSERT (1000/stmt)       1 txn                16        170        665   (ms)
+LOAD DATA LOCAL INFILE             bulk                 19         39        336   (ms)

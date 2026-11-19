@@ -1,0 +1,201 @@
+line_no|reason|raw_line
+500|non-numeric amount 'N/A'|P100500|192322500|Student 100500|1|Poonamallee|2027-03-31|N/A
+1000|empty line|
+1500|invalid date '31/03/2027'|P101500|192323500|Student 101500|1|Poonamallee|31/03/2027|6000
+2000|duplicate pass ID P100001|P100001|192324000|Student 102000|1|Sriperumbudur|2027-03-31|6500
+2500|negative amount|P102500|192324500|Student 102500|1|Poonamallee|2027-03-31|-5
+3000|wrong field count (3)|P103000|x|y
+3500|non-numeric amount 'N/A'|P103500|192325500|Student 103500|1|Poonamallee|2027-03-31|N/A
+4000|empty line|
+4500|invalid date '31/03/2027'|P104500|192326500|Student 104500|1|Poonamallee|31/03/2027|6200
+5000|duplicate pass ID P100001|P100001|192327000|Student 105000|1|Sriperumbudur|2027-03-31|6000
+5500|negative amount|P105500|192327500|Student 105500|1|Poonamallee|2027-03-31|-5
+6000|wrong field count (3)|P106000|x|y
+6500|non-numeric amount 'N/A'|P106500|192328500|Student 106500|1|Poonamallee|2027-03-31|N/A
+7000|empty line|
+7500|invalid date '31/03/2027'|P107500|192329500|Student 107500|1|Poonamallee|31/03/2027|6400
+8000|duplicate pass ID P100001|P100001|192321000|Student 108000|1|Sriperumbudur|2027-03-31|6200
+8500|negative amount|P108500|192321500|Student 108500|1|Poonamallee|2027-03-31|-5
+9000|wrong field count (3)|P109000|x|y
+9500|non-numeric amount 'N/A'|P109500|192322500|Student 109500|1|Poonamallee|2027-03-31|N/A
+10000|empty line|
+10500|invalid date '31/03/2027'|P110500|192323500|Student 110500|1|Poonamallee|31/03/2027|6600
+11000|duplicate pass ID P100001|P100001|192324000|Student 111000|1|Sriperumbudur|2027-03-31|6400
+11500|negative amount|P111500|192324500|Student 111500|1|Poonamallee|2027-03-31|-5
+12000|wrong field count (3)|P112000|x|y
+12500|non-numeric amount 'N/A'|P112500|192325500|Student 112500|1|Poonamallee|2027-03-31|N/A
+13000|empty line|
+13500|invalid date '31/03/2027'|P113500|192326500|Student 113500|1|Poonamallee|31/03/2027|6100
+14000|duplicate pass ID P100001|P100001|192327000|Student 114000|1|Sriperumbudur|2027-03-31|6600
+14500|negative amount|P114500|192327500|Student 114500|1|Poonamallee|2027-03-31|-5
+15000|wrong field count (3)|P115000|x|y
+15500|non-numeric amount 'N/A'|P115500|192328500|Student 115500|1|Poonamallee|2027-03-31|N/A
+16000|empty line|
+16500|invalid date '31/03/2027'|P116500|192329500|Student 116500|1|Poonamallee|31/03/2027|6300
+17000|duplicate pass ID P100001|P100001|192321000|Student 117000|1|Sriperumbudur|2027-03-31|6100
+17500|negative amount|P117500|192321500|Student 117500|1|Poonamallee|2027-03-31|-5
+18000|wrong field count (3)|P118000|x|y
+18500|non-numeric amount 'N/A'|P118500|192322500|Student 118500|1|Poonamallee|2027-03-31|N/A
+19000|empty line|
+19500|invalid date '31/03/2027'|P119500|192323500|Student 119500|1|Poonamallee|31/03/2027|6500
+20000|duplicate pass ID P100001|P100001|192324000|Student 120000|1|Sriperumbudur|2027-03-31|6300
+20500|negative amount|P120500|192324500|Student 120500|1|Poonamallee|2027-03-31|-5
+21000|wrong field count (3)|P121000|x|y
+21500|non-numeric amount 'N/A'|P121500|192325500|Student 121500|1|Poonamallee|2027-03-31|N/A
+22000|empty line|
+22500|invalid date '31/03/2027'|P122500|192326500|Student 122500|1|Poonamallee|31/03/2027|6000
+23000|duplicate pass ID P100001|P100001|192327000|Student 123000|1|Sriperumbudur|2027-03-31|6500
+23500|negative amount|P123500|192327500|Student 123500|1|Poonamallee|2027-03-31|-5
+24000|wrong field count (3)|P124000|x|y
+24500|non-numeric amount 'N/A'|P124500|192328500|Student 124500|1|Poonamallee|2027-03-31|N/A
+25000|empty line|
+25500|invalid date '31/03/2027'|P125500|192329500|Student 125500|1|Poonamallee|31/03/2027|6200
+26000|duplicate pass ID P100001|P100001|192321000|Student 126000|1|Sriperumbudur|2027-03-31|6000
+26500|negative amount|P126500|192321500|Student 126500|1|Poonamallee|2027-03-31|-5
+27000|wrong field count (3)|P127000|x|y
+27500|non-numeric amount 'N/A'|P127500|192322500|Student 127500|1|Poonamallee|2027-03-31|N/A
+28000|empty line|
+28500|invalid date '31/03/2027'|P128500|192323500|Student 128500|1|Poonamallee|31/03/2027|6400
+29000|duplicate pass ID P100001|P100001|192324000|Student 129000|1|Sriperumbudur|2027-03-31|6200
+29500|negative amount|P129500|192324500|Student 129500|1|Poonamallee|2027-03-31|-5
+30000|wrong field count (3)|P130000|x|y
+30500|non-numeric amount 'N/A'|P130500|192325500|Student 130500|1|Poonamallee|2027-03-31|N/A
+31000|empty line|
+31500|invalid date '31/03/2027'|P131500|192326500|Student 131500|1|Poonamallee|31/03/2027|6600
+32000|duplicate pass ID P100001|P100001|192327000|Student 132000|1|Sriperumbudur|2027-03-31|6400
+32500|negative amount|P132500|192327500|Student 132500|1|Poonamallee|2027-03-31|-5
+33000|wrong field count (3)|P133000|x|y
+33500|non-numeric amount 'N/A'|P133500|192328500|Student 133500|1|Poonamallee|2027-03-31|N/A
+34000|empty line|
+34500|invalid date '31/03/2027'|P134500|192329500|Student 134500|1|Poonamallee|31/03/2027|6100
+35000|duplicate pass ID P100001|P100001|192321000|Student 135000|1|Sriperumbudur|2027-03-31|6600
+35500|negative amount|P135500|192321500|Student 135500|1|Poonamallee|2027-03-31|-5
+36000|wrong field count (3)|P136000|x|y
+36500|non-numeric amount 'N/A'|P136500|192322500|Student 136500|1|Poonamallee|2027-03-31|N/A
+37000|empty line|
+37500|invalid date '31/03/2027'|P137500|192323500|Student 137500|1|Poonamallee|31/03/2027|6300
+38000|duplicate pass ID P100001|P100001|192324000|Student 138000|1|Sriperumbudur|2027-03-31|6100
+38500|negative amount|P138500|192324500|Student 138500|1|Poonamallee|2027-03-31|-5
+39000|wrong field count (3)|P139000|x|y
+39500|non-numeric amount 'N/A'|P139500|192325500|Student 139500|1|Poonamallee|2027-03-31|N/A
+40000|empty line|
+40500|invalid date '31/03/2027'|P140500|192326500|Student 140500|1|Poonamallee|31/03/2027|6500
+41000|duplicate pass ID P100001|P100001|192327000|Student 141000|1|Sriperumbudur|2027-03-31|6300
+41500|negative amount|P141500|192327500|Student 141500|1|Poonamallee|2027-03-31|-5
+42000|wrong field count (3)|P142000|x|y
+42500|non-numeric amount 'N/A'|P142500|192328500|Student 142500|1|Poonamallee|2027-03-31|N/A
+43000|empty line|
+43500|invalid date '31/03/2027'|P143500|192329500|Student 143500|1|Poonamallee|31/03/2027|6000
+44000|duplicate pass ID P100001|P100001|192321000|Student 144000|1|Sriperumbudur|2027-03-31|6500
+44500|negative amount|P144500|192321500|Student 144500|1|Poonamallee|2027-03-31|-5
+45000|wrong field count (3)|P145000|x|y
+45500|non-numeric amount 'N/A'|P145500|192322500|Student 145500|1|Poonamallee|2027-03-31|N/A
+46000|empty line|
+46500|invalid date '31/03/2027'|P146500|192323500|Student 146500|1|Poonamallee|31/03/2027|6200
+47000|duplicate pass ID P100001|P100001|192324000|Student 147000|1|Sriperumbudur|2027-03-31|6000
+47500|negative amount|P147500|192324500|Student 147500|1|Poonamallee|2027-03-31|-5
+48000|wrong field count (3)|P148000|x|y
+48500|non-numeric amount 'N/A'|P148500|192325500|Student 148500|1|Poonamallee|2027-03-31|N/A
+49000|empty line|
+49500|invalid date '31/03/2027'|P149500|192326500|Student 149500|1|Poonamallee|31/03/2027|6400
+50000|duplicate pass ID P100001|P100001|192327000|Student 150000|1|Sriperumbudur|2027-03-31|6200
+50500|negative amount|P150500|192327500|Student 150500|1|Poonamallee|2027-03-31|-5
+51000|wrong field count (3)|P151000|x|y
+51500|non-numeric amount 'N/A'|P151500|192328500|Student 151500|1|Poonamallee|2027-03-31|N/A
+52000|empty line|
+52500|invalid date '31/03/2027'|P152500|192329500|Student 152500|1|Poonamallee|31/03/2027|6600
+53000|duplicate pass ID P100001|P100001|192321000|Student 153000|1|Sriperumbudur|2027-03-31|6400
+53500|negative amount|P153500|192321500|Student 153500|1|Poonamallee|2027-03-31|-5
+54000|wrong field count (3)|P154000|x|y
+54500|non-numeric amount 'N/A'|P154500|192322500|Student 154500|1|Poonamallee|2027-03-31|N/A
+55000|empty line|
+55500|invalid date '31/03/2027'|P155500|192323500|Student 155500|1|Poonamallee|31/03/2027|6100
+56000|duplicate pass ID P100001|P100001|192324000|Student 156000|1|Sriperumbudur|2027-03-31|6600
+56500|negative amount|P156500|192324500|Student 156500|1|Poonamallee|2027-03-31|-5
+57000|wrong field count (3)|P157000|x|y
+57500|non-numeric amount 'N/A'|P157500|192325500|Student 157500|1|Poonamallee|2027-03-31|N/A
+58000|empty line|
+58500|invalid date '31/03/2027'|P158500|192326500|Student 158500|1|Poonamallee|31/03/2027|6300
+59000|duplicate pass ID P100001|P100001|192327000|Student 159000|1|Sriperumbudur|2027-03-31|6100
+59500|negative amount|P159500|192327500|Student 159500|1|Poonamallee|2027-03-31|-5
+60000|wrong field count (3)|P160000|x|y
+60500|non-numeric amount 'N/A'|P160500|192328500|Student 160500|1|Poonamallee|2027-03-31|N/A
+61000|empty line|
+61500|invalid date '31/03/2027'|P161500|192329500|Student 161500|1|Poonamallee|31/03/2027|6500
+62000|duplicate pass ID P100001|P100001|192321000|Student 162000|1|Sriperumbudur|2027-03-31|6300
+62500|negative amount|P162500|192321500|Student 162500|1|Poonamallee|2027-03-31|-5
+63000|wrong field count (3)|P163000|x|y
+63500|non-numeric amount 'N/A'|P163500|192322500|Student 163500|1|Poonamallee|2027-03-31|N/A
+64000|empty line|
+64500|invalid date '31/03/2027'|P164500|192323500|Student 164500|1|Poonamallee|31/03/2027|6000
+65000|duplicate pass ID P100001|P100001|192324000|Student 165000|1|Sriperumbudur|2027-03-31|6500
+65500|negative amount|P165500|192324500|Student 165500|1|Poonamallee|2027-03-31|-5
+66000|wrong field count (3)|P166000|x|y
+66500|non-numeric amount 'N/A'|P166500|192325500|Student 166500|1|Poonamallee|2027-03-31|N/A
+67000|empty line|
+67500|invalid date '31/03/2027'|P167500|192326500|Student 167500|1|Poonamallee|31/03/2027|6200
+68000|duplicate pass ID P100001|P100001|192327000|Student 168000|1|Sriperumbudur|2027-03-31|6000
+68500|negative amount|P168500|192327500|Student 168500|1|Poonamallee|2027-03-31|-5
+69000|wrong field count (3)|P169000|x|y
+69500|non-numeric amount 'N/A'|P169500|192328500|Student 169500|1|Poonamallee|2027-03-31|N/A
+70000|empty line|
+70500|invalid date '31/03/2027'|P170500|192329500|Student 170500|1|Poonamallee|31/03/2027|6400
+71000|duplicate pass ID P100001|P100001|192321000|Student 171000|1|Sriperumbudur|2027-03-31|6200
+71500|negative amount|P171500|192321500|Student 171500|1|Poonamallee|2027-03-31|-5
+72000|wrong field count (3)|P172000|x|y
+72500|non-numeric amount 'N/A'|P172500|192322500|Student 172500|1|Poonamallee|2027-03-31|N/A
+73000|empty line|
+73500|invalid date '31/03/2027'|P173500|192323500|Student 173500|1|Poonamallee|31/03/2027|6600
+74000|duplicate pass ID P100001|P100001|192324000|Student 174000|1|Sriperumbudur|2027-03-31|6400
+74500|negative amount|P174500|192324500|Student 174500|1|Poonamallee|2027-03-31|-5
+75000|wrong field count (3)|P175000|x|y
+75500|non-numeric amount 'N/A'|P175500|192325500|Student 175500|1|Poonamallee|2027-03-31|N/A
+76000|empty line|
+76500|invalid date '31/03/2027'|P176500|192326500|Student 176500|1|Poonamallee|31/03/2027|6100
+77000|duplicate pass ID P100001|P100001|192327000|Student 177000|1|Sriperumbudur|2027-03-31|6600
+77500|negative amount|P177500|192327500|Student 177500|1|Poonamallee|2027-03-31|-5
+78000|wrong field count (3)|P178000|x|y
+78500|non-numeric amount 'N/A'|P178500|192328500|Student 178500|1|Poonamallee|2027-03-31|N/A
+79000|empty line|
+79500|invalid date '31/03/2027'|P179500|192329500|Student 179500|1|Poonamallee|31/03/2027|6300
+80000|duplicate pass ID P100001|P100001|192321000|Student 180000|1|Sriperumbudur|2027-03-31|6100
+80500|negative amount|P180500|192321500|Student 180500|1|Poonamallee|2027-03-31|-5
+81000|wrong field count (3)|P181000|x|y
+81500|non-numeric amount 'N/A'|P181500|192322500|Student 181500|1|Poonamallee|2027-03-31|N/A
+82000|empty line|
+82500|invalid date '31/03/2027'|P182500|192323500|Student 182500|1|Poonamallee|31/03/2027|6500
+83000|duplicate pass ID P100001|P100001|192324000|Student 183000|1|Sriperumbudur|2027-03-31|6300
+83500|negative amount|P183500|192324500|Student 183500|1|Poonamallee|2027-03-31|-5
+84000|wrong field count (3)|P184000|x|y
+84500|non-numeric amount 'N/A'|P184500|192325500|Student 184500|1|Poonamallee|2027-03-31|N/A
+85000|empty line|
+85500|invalid date '31/03/2027'|P185500|192326500|Student 185500|1|Poonamallee|31/03/2027|6000
+86000|duplicate pass ID P100001|P100001|192327000|Student 186000|1|Sriperumbudur|2027-03-31|6500
+86500|negative amount|P186500|192327500|Student 186500|1|Poonamallee|2027-03-31|-5
+87000|wrong field count (3)|P187000|x|y
+87500|non-numeric amount 'N/A'|P187500|192328500|Student 187500|1|Poonamallee|2027-03-31|N/A
+88000|empty line|
+88500|invalid date '31/03/2027'|P188500|192329500|Student 188500|1|Poonamallee|31/03/2027|6200
+89000|duplicate pass ID P100001|P100001|192321000|Student 189000|1|Sriperumbudur|2027-03-31|6000
+89500|negative amount|P189500|192321500|Student 189500|1|Poonamallee|2027-03-31|-5
+90000|wrong field count (3)|P190000|x|y
+90500|non-numeric amount 'N/A'|P190500|192322500|Student 190500|1|Poonamallee|2027-03-31|N/A
+91000|empty line|
+91500|invalid date '31/03/2027'|P191500|192323500|Student 191500|1|Poonamallee|31/03/2027|6400
+92000|duplicate pass ID P100001|P100001|192324000|Student 192000|1|Sriperumbudur|2027-03-31|6200
+92500|negative amount|P192500|192324500|Student 192500|1|Poonamallee|2027-03-31|-5
+93000|wrong field count (3)|P193000|x|y
+93500|non-numeric amount 'N/A'|P193500|192325500|Student 193500|1|Poonamallee|2027-03-31|N/A
+94000|empty line|
+94500|invalid date '31/03/2027'|P194500|192326500|Student 194500|1|Poonamallee|31/03/2027|6600
+95000|duplicate pass ID P100001|P100001|192327000|Student 195000|1|Sriperumbudur|2027-03-31|6400
+95500|negative amount|P195500|192327500|Student 195500|1|Poonamallee|2027-03-31|-5
+96000|wrong field count (3)|P196000|x|y
+96500|non-numeric amount 'N/A'|P196500|192328500|Student 196500|1|Poonamallee|2027-03-31|N/A
+97000|empty line|
+97500|invalid date '31/03/2027'|P197500|192329500|Student 197500|1|Poonamallee|31/03/2027|6100
+98000|duplicate pass ID P100001|P100001|192321000|Student 198000|1|Sriperumbudur|2027-03-31|6600
+98500|negative amount|P198500|192321500|Student 198500|1|Poonamallee|2027-03-31|-5
+99000|wrong field count (3)|P199000|x|y
+99500|non-numeric amount 'N/A'|P199500|192322500|Student 199500|1|Poonamallee|2027-03-31|N/A
+100000|empty line|
